@@ -13,7 +13,7 @@ class Lesson:
         self.lessonType = _lessonType
 
     def print(self):
-        print('{0} ({1}) в {2} ауд. {3} / {4}'.format(self.name, self.prep,self.begin, self.auditory, self.lessonType))
+        print('* {0} ({1}) в {2} ауд. {3} / {4}'.format(self.name, self.prep,self.begin, self.auditory, self.lessonType))
 
     def getText(self):
-        return  '{0} ({1}) в {2} ауд. {3} / {4} \n'.format(self.name, self.prep, self.begin, self.auditory, self.lessonType)
+        return  '* {0} ({1}) в {2} ауд. {3} / {4} \n'.format(self.name, self.prep, self.begin, self.auditory, self.lessonType)

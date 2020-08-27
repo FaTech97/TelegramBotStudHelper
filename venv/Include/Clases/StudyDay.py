@@ -18,6 +18,7 @@ class StudyDay:
         minTime = 86400
         lessonNumber = 0
         intLesson = 0
+        paraMessage = 'Пар нет, отдыхайте'
         for lesson in self.lessons:
             now = datetime.now()
             timeToLesson = datetime(now.year, now.month, now.day, int(lesson.begin.split(':')[0]),
@@ -29,7 +30,6 @@ class StudyDay:
                     intLesson = lessonNumber
             lessonNumber += 1
         if (minTime < 86400):
-            print('Пара "' + self.lessons[intLesson].name + '" через ' + str(int(minTime / 3600)) + ' ч. ' + str(
+            paraMessage = ('Пара "' + self.lessons[intLesson].name + '" через ' + str(int(minTime / 3600)) + ' ч. ' + str(
                 int((minTime % 3600) / 60)) + ' мин. в ауд ' + self.lessons[intLesson].auditory)
-        else:
-            print('Пар нет, отдыхайте')
+        return paraMessage
